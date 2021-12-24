@@ -1,0 +1,46 @@
+/* Matematikselislemleri yapacagimiz degiskeni olusturalim */
+		 
+		double dSayi = -29.45; //aradaki virgul degil nokta
+		 
+		System.out.println("sayinin ilk degeri    : " + dSayi);
+		 
+		/* sayinin mutlak degerini alalim */
+		 
+		System.out.println("sayinin mutlak degeri : " + Math.abs(dSayi));
+		 
+		 
+		/* sayiyi yukari yuvarlayalim */
+		 
+		System.out.println("sayi yukari yuvarla   : " + Math.ceil(dSayi));
+		 
+		 
+		/* sayiyiasagi  yuvarlayalim */
+		 
+		System.out.println("sayiasagi  yuvarla   : " + Math.floor(dSayi));
+		 
+		 
+		/* 81 sayisinin karek�k�n� alalim */
+		 
+		System.out.println("100'un karekok degeri : " + Math.sqrt(81));
+		 
+		 
+		/* 3  sayisinin kupunu alalim */
+		 
+		System.out.println("3'un kupunun   degeri : " + Math.pow(3, 3));
+		
+		/* random() metodunun kullanimi. */
+		 
+		double dSayi2 = Math.random();
+		 
+		System.out.println("Rastgele cekilen double sayi  : " + dSayi2);
+		 
+		int iSayi     = (int)(Math.random()*100);
+		 
+		System.out.println("Rastgele cekilen int    sayi  : " + iSayi);
+		 
+		 
+		/* rastgele sayilara aralik verme (1 ile 10 arasinda) */
+		 
+		int iSayi2    = (int)(Math.random()*9+1);
+		 
+		System.out.println("1 ile 10 arasi cekilen int sayi: " + iSayi2);
