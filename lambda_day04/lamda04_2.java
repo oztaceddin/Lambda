@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalDouble;
+import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
 public class lamda04_2 {
@@ -212,6 +213,42 @@ public class lamda04_2 {
 		   
 		   
 	   }//OptionalDouble[95.33333333333333]
+	   
+	   //***************************************************
+	   
+	 //task 09-->gunduz batch'lerinin sayisini  yazdiriniz.
+	   public static int gunduzBatchSayisi(List<Techpro> list){
+	     return (int) list.
+	               stream()
+	               .filter(t->t.getBatchName().contains("gunduz")).count();
+
+	   }
+	   
+	   
+	   //***********************************
+	   
+	 //task 10-->Ogrenci sayilari 130'dan fazla olan batch'lerin en buyuk batch ort'unu bulunuz
+	   public static OptionalInt ogrcSayisi130FazlaEnBykBatch(List<Techpro> list){
+	       return list.
+	               stream()
+	               .filter(t->t.getOgrcSayisi()>130).
+	               mapToInt(Techpro::getBatchOrt).
+	               max();
+
+	   }
+	   
+	   //******************************************
+	   
+	 //task 11-->Ogrenci sayilari 150'dan az olan batch'lerin en kucuk batch ort'unu bulunuz.
+	   public static int ogrcSayisi150AzEnKckBatch(List<Techpro> list){
+	       return list.
+	               stream()
+	               .filter(t->t.getOgrcSayisi()<150).
+	               mapToInt(Techpro::getBatchOrt).
+	               min().
+	               getAsInt();//getAsInt()-->cıktıyı int type olarak return eder
+
+	   }
 	   
 	
 
